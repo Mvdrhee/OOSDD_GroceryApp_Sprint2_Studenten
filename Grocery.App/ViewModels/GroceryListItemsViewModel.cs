@@ -75,6 +75,7 @@ namespace Grocery.App.ViewModels
             if (product == null || product.Id <= 0) { return; }
             GroceryListItem item = new(0, GroceryList.Id, product.Id, product.Stock);
             _groceryListItemsService.Add(item);
+            product.Stock = 0;
             _productService.Update(product);
             AvailableProducts.Remove(product);
             OnGroceryListChanged(GroceryList);
