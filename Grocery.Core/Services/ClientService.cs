@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace Grocery.Core.Services
 {
-    public class ClientService : IClientService
+    public class _clientService : IClientService
     {
         private readonly IClientRepository _clientRepository;
-        public ClientService(IClientRepository clientRepository)
+        public _clientService(IClientRepository clientRepository)
         {
             _clientRepository = clientRepository;
         }
