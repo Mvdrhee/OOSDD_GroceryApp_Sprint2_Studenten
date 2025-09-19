@@ -86,6 +86,9 @@
 	  <MauiXaml Update="Views\GroceryListsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginView - Copy.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\ProductView.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

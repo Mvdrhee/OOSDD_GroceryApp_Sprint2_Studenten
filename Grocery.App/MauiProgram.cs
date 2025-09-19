@@ -27,8 +27,8 @@ namespace Grocery.App
             builder.Services.AddSingleton<IGroceryListService, GroceryListService>();
             builder.Services.AddSingleton<IGroceryListItemsService, GroceryListItemsService>();
             builder.Services.AddSingleton<IProductService, ProductService>();
-            //builder.Services.AddSingleton<IAuthService, AuthService>();
-            builder.Services.AddSingleton<IClientService, ClientService>();
+            builder.Services.AddSingleton<IAuthService, AuthService>();
+            builder.Services.AddSingleton<IClientService, _clientService>();
 
             builder.Services.AddSingleton<IGroceryListRepository, GroceryListRepository>();
             builder.Services.AddSingleton<IGroceryListItemsRepository, GroceryListItemsRepository>();
@@ -40,7 +40,7 @@ namespace Grocery.App
             builder.Services.AddTransient<GroceryListItemsView>().AddTransient<GroceryListItemsViewModel>();
             builder.Services.AddTransient<ProductView>().AddTransient<ProductViewModel>();
             builder.Services.AddTransient<ChangeColorView>().AddTransient<ChangeColorViewModel>();
-            //builder.Services.AddTransient<LoginView>().AddTransient<LoginViewModel>();
+            builder.Services.AddTransient<LoginView>().AddTransient<LoginViewModel>();
             return builder.Build();
         }
     }
